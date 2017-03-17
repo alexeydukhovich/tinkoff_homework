@@ -1,5 +1,9 @@
-// как оказалось "стрелочная функция не имеет собственного объекта arguments"
-let my_bind = (func, ctxt) => (function() {return func.apply(ctxt, arguments)});
+function my_bind(func, ctxt) {
+    return function()
+    {
+        return func.apply(ctxt, arguments)
+    }
+};
 
 
 //example
